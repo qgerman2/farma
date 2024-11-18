@@ -1,0 +1,29 @@
+@tailwind base layer(base);
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+p {
+    text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+:root {
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    margin: 0px;
+}

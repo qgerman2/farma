@@ -1,0 +1,39 @@
+---
+import Button from "fulldev-ui/components/Button.astro";
+import Search from "../components/Search.astro";
+---
+
+<div class="basis-[300px] grow-[1] bg-color-1 flex flex-col gap-space-2">
+    <Search />
+    <input
+        type="checkbox"
+        id="menu_checkbox"
+        class="invisible absolute"
+        checked="false"
+    />
+    <Button id="menu_button">menu</Button>
+    <div class="menu_content overflow-hidden">
+        <p>menu</p>
+        <p>item</p>
+        <p>menu</p>
+    </div>
+</div>
+
+<style>
+    /* toggle menu visibility with checkbox */
+    @media (width < 1000px) {
+        input:checked ~ .menu_content {
+            height: 0px;
+        }
+    }
+</style>
+
+<script>
+    // toggle checkbox with button
+    let button = document.getElementById("menu_button");
+    let checkbox = document.getElementById("menu_checkbox") as HTMLInputElement;
+    button?.addEventListener("click", () => {
+        console.log("click");
+        checkbox.checked = !checkbox.checked;
+    });
+</script>
