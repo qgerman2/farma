@@ -3,15 +3,17 @@ import Button from "fulldev-ui/components/Button.astro";
 import Search from "../components/Search.astro";
 ---
 
-<div class="basis-[300px] grow-[1] bg-color-1 flex flex-col gap-space-2">
+<div
+    class="basis-[300px] grow bg-color-1 flex flex-col p-space-2 gap-y-space-2"
+>
     <Search />
+    <Button id="menu_button">menu</Button>
     <input
         type="checkbox"
         id="menu_checkbox"
         class="invisible absolute"
         checked="false"
     />
-    <Button id="menu_button">menu</Button>
     <div class="menu_content overflow-hidden">
         <p>menu</p>
         <p>item</p>
